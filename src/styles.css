@@ -1,0 +1,43 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.display-flex {
+  display: flex;
+}
+.ml-4 {
+  margin-left: 4px;
+}
+.ml-16 {
+  margin-left: 16px;
+}
+.mt-8 {
+  margin-top: 8px;
+}
+.mt-4 {
+  margin-top: 4px;
+}
+.pl-4 {
+  padding-left: 4px;
+}
+.form,
+.input-form {
+  display: flex;
+  flex: 1;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.btn-link {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #0800ffe5;
+}
+.comment__user-timestamp {
+  font-size: 12px;
+}
