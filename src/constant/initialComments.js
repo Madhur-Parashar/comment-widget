@@ -1,68 +1,60 @@
 export const initialComments = [
   {
     message: "This is 1 level comment",
-    timeStamp: "",
     id: 0,
     parent: null,
     userName: "Aditya",
-    createdAt: new Date("May 19, 2023 03:24:00")
+    createdAt: new Date("May 19, 2023 03:24:00"),
   },
   {
     message: "This is 1 level comment",
-    timeStamp: "",
     id: 1,
     parent: null,
     userName: "Abhi",
-    createdAt: new Date("May 20, 2023 04:24:00")
+    createdAt: new Date("May 20, 2023 04:24:00"),
   },
   {
     message: "This is 2 level comment",
-    timeStamp: "",
     id: 3,
     parent: 0,
     userName: "Akash",
-    createdAt: new Date("May 20, 2023 04:24:00")
+    createdAt: new Date("May 20, 2023 04:24:00"),
   },
   {
     message: "This is 2 level comment",
-    timeStamp: "",
     id: 4,
     parent: 0,
     userName: "Maddy",
-    createdAt: new Date("May 20, 2023 04:24:00")
+    createdAt: new Date("May 20, 2023 04:24:00"),
   },
   {
     message: "This is 3 level comment",
-    timeStamp: "",
     id: 5,
     parent: 4,
     userName: "Aditya",
-    createdAt: new Date("May 20, 2023 04:24:00")
+    createdAt: new Date("May 20, 2023 04:24:00"),
   },
   {
     message: "This is 4 level comment",
-    timeStamp: "",
     id: 6,
     parent: 5,
     userName: "Shree",
-    createdAt: new Date("May 20, 2023 04:24:00")
+    createdAt: new Date("May 20, 2023 04:24:00"),
   },
   {
     message: "This is 5 level comment",
-    timeStamp: "",
     id: 7,
     parent: 6,
     userName: "Akash",
-    createdAt: new Date("May 20, 2023 04:24:00")
+    createdAt: new Date("May 20, 2023 04:24:00"),
   },
   {
     message: "This is 2 level comment",
-    timeStamp: "",
     id: 8,
     parent: 1,
     userName: "Maddy",
-    createdAt: new Date("May 20, 2023 04:24:00")
-  }
+    createdAt: new Date("May 20, 2023 04:24:00"),
+  },
 ];
 
 // comments: [

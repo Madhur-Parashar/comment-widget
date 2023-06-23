@@ -7,7 +7,7 @@ import { useContext, useState } from "react";
 export default function AddComment({
   commentId = null,
   onAddCommentSuccess = () => {},
-  userName = "Maddy"
+  userName = "Maddy",
 }) {
   const [message, setMessage] = useState("");
   const dispatch = useContext(CommentsDispatchContext);
@@ -19,9 +19,9 @@ export default function AddComment({
     dispatch({
       type: "ADD_COMMENT",
       message: message,
-      timeStamp: "",
       parent: commentId,
-      userName: userName
+      userName: userName,
+      date: new Date(),
     });
     setMessage("");
     onAddCommentSuccess();
