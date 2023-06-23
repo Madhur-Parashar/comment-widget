@@ -9,7 +9,7 @@ export default function CommentActions({
   message = "",
   onEditComment = () => {},
   onEditSuccess = () => {},
-  showEditComment = false
+  showEditComment = false,
 }) {
   const [showAddComment, toggleAddComment] = useState(false);
   const [editCommentMessage, setEditCommentMessage] = useState(message);
@@ -27,7 +27,12 @@ export default function CommentActions({
     onEditComment();
   };
   const handleEditComment = () => {
-    dispatch({ type: "EDIT_COMMENT", id, message: editCommentMessage });
+    dispatch({
+      type: "EDIT_COMMENT",
+      id,
+      message: editCommentMessage,
+      date: new Date(),
+    });
     onEditSuccess();
   };
   const handleCommentChange = (e) => {

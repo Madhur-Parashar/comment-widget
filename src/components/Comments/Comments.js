@@ -7,9 +7,8 @@ export default function Comments({ commentList, comments }) {
   return (
     <>
       {commentList.map((comment) => (
-        <div className="comments">
+        <div className="comments" key={comment.id}>
           <Comment
-            key={comment.id}
             childComments={childComments(comment.id)}
             comment={comment}
           />

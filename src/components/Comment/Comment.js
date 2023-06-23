@@ -14,7 +14,9 @@ export default function Comment(props) {
   const handleToggleEditComment = () => {
     toggleEditComment((showEditComment) => !showEditComment);
   };
-  const commentTime = updatedAt ? updatedAt : createdAt;
+  const commentTime = updatedAt ? new Date(updatedAt) : new Date(createdAt);
+  console.log("commentTime", commentTime);
+
   const formattedDate = commentTime
     ? `${commentTime.getDate()}/${
         commentTime.getMonth() + 1
@@ -23,7 +25,7 @@ export default function Comment(props) {
   const nameFirstCharacter = userName.charAt(0);
   return (
     <div className="comment display-flex mt-16">
-      <div class="image-container">
+      <div className="image-container">
         <div className="comment__name-character">{nameFirstCharacter}</div>
       </div>
       <div className="comment-content ml-8">
