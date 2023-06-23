@@ -10,7 +10,7 @@ export default function CommentList() {
 
   return (
     <div className="comment-list mt-8">
-      <Comments commentList={rootComments} />
+      <Comments commentList={rootComments} comments={comments} />
     </div>
   );
 }

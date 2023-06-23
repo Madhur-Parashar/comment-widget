@@ -1,5 +1,3 @@
-import Comments from "../Comments/Comments";
-
 import CommentActions from "../CommentActions/CommentActions";
 import { useState } from "react";
 
@@ -22,23 +20,25 @@ export default function Comment(props) {
         commentTime.getMonth() + 1
       }/${commentTime.getFullYear()}`
     : null;
-  //  const formattedTime = createdAt ? `${createdAt.getHours()}hr` : null
+  const nameFirstCharacter = userName.charAt(0);
   return (
-    <div className="comment ml-16 mt-8">
-      <div className="comment__user-timestamp">
-        {userName} | {formattedDate}{" "}
+    <div className="comment display-flex mt-16">
+      <div class="image-container">
+        <div className="comment__name-character">{nameFirstCharacter}</div>
       </div>
-      {!showEditComment ? <div>{message}</div> : null}
-      <CommentActions
-        onEditComment={handleToggleEditComment}
-        message={message}
-        showEditComment={showEditComment}
-        onEditSuccess={handleToggleEditComment}
-        id={id}
-      />
-      {props.childComments.length > 0 ? (
-        <Comments commentList={props.childComments} />
-      ) : null}
+      <div className="comment-content ml-8">
+        <div className="comment__user-timestamp">
+          {userName} | {formattedDate} {updatedAt ? "(edited)" : null}
+        </div>
+        {!showEditComment ? <div>{message}</div> : null}
+        <CommentActions
+          onEditComment={handleToggleEditComment}
+          message={message}
+          showEditComment={showEditComment}
+          onEditSuccess={handleToggleEditComment}
+          id={id}
+        />
+      </div>
     </div>
   );
 }
